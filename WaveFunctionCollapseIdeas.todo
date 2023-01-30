@@ -1,0 +1,46 @@
+- Module could use a config file which defines the tiles and how they can connect:
+    - Information stored using symbols such as @TileID1, !Interaction{TileID1, TileID2}
+    - @ Being a constructor which will create a new tile type, with its own rules
+    - ! Being a rule definer allowing the programmer to write rules for how a tile can be generated:
+        -e.g. !TileID1 >< TileID2 Meaning these two tiles will be able to connect
+        -e.g. !TileID1 <> TileID2 Meaning these two tiles wont be able to connect
+        -e.g. !TileID1 >< * Meaning TileID1 will be able to connect with all tiles
+        -e.g. !TileID1(side1) >< TileID2 Meaning TileID2 will only be able to connect to TileID1 1st side
+        -TODO write other rules
+    
+- Connections logged using numbers:
+    -e.g. Tile[1010] meaning the Tiles 1st side is closed, 2nd is open, 3rd is closed, 4th is open ect.
+    -- Less malleable
+
+
+- A mixture of both previous methods:
+    - Program interprets the config file and stores it as numbers
+    - Only reinterprets if the config file changes
+        - Could be done by saving a value of the config value
+        - 
+        - 
+        - where val is passed the text contained in the config file
+
+
+
+*Test Code
+import hashlib
+def check_config_file():
+    with open("config.txt", "r") as file:
+        config_text = file.read()
+        hash_value = hashlib.sha256(config_text.encode()).hexdigest()
+        try:
+            with open("config_hash.txt", "r") as hash_file:
+                stored_hash = hash_file.read()
+                if stored_hash == hash_value:
+                    return False
+                else:
+                    with open("config_hash.txt", "w") as hash_file:
+                        hash_file.write(hash_value)
+                        return True
+        except FileNotFoundError:
+            with open("config_hash.txt", "w") as hash_file:
+                hash_file.write(hash_value)
+                return True
+if check_config_file():
+    # reinterpret config file
