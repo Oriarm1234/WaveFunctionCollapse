@@ -1,0 +1,111 @@
+-TODO
+
+-Find the main game idea and gameplay:
+
+
+    -Dungeon diving game:
+
+
+        -The user may be able to explore above ground and purchase items from a village
+
+        -Could have a village development and exploration feature
+
+        -Main gameplay based in an underground setting where the player can explore "dungeons"
+
+        -Dungeons will have loot, enemies, and a final boss to fight
+
+        -The player will be able to level by fighting and gain money
+
+        -Money consists of (Platinum, Gold, Silver, Copper, Bronze)
+
+
+            -Bronze being the lowest in value and can be traded for food and low-quality drinks
+
+            -Copper can gain housing, most drinks, and more saturating food
+
+            -Silver can be traded for low-quality armor and weapons
+
+            -Gold can be traded for good-quality armor, weapons, and low-quality spell books
+
+            -Platinum can be traded for excellent armor, weapons, rare spell books, and pet familiars
+
+
+        -Once the player reaches a certain stage, money loses its value
+
+
+            -To fix this, multiple options are available
+
+
+                -Drive the prices up to allow for constant gameplay
+
+
+                    -May get boring fast and loses the ability to introduce new options
+
+                -Have different realms with different currencies
+
+
+                    -Again gameplay may get boring, however new enemies in these areas may help
+
+                    -More skills could help and potentially new features such as mining and cooking
+
+                    -Realms could have "themes" which define the gameplay for that area
+
+                    -e.g. a sky realm would introduce high-paced combat and agility
+
+                    -Whereas an earth realm may focus more on mining to progress and not fighting, as well as introduce cooking
+
+                    -Realms in order could be (Heaven, Earth, Hell)
+
+                    -Could allow for the game theme to be of a crusader looking to rid the worlds realms of demons
+
+                    -Give meaning to the dungeons as "Prisons" which contain demon prisoners
+
+                    -The demon killers could be considered as an extremist religious cult
+
+                    -The gameplay should remind the player that what they are doing is wrong
+
+                    -But the players hand should always be forced to do the wrong thing, maybe even in a literal sense
+
+                    -The player could be infected by a parasite(Others negative beliefs) that causes them to act dangerously and they have to fight against it
+
+                    -The game theme could be used as a metaphor for real-life issues, such as discrimination and prejudice, and the player could be faced with difficult moral choices.
+
+                    -Materials in addition to money such as wood, stone.
+
+                    -These materials could be related to the realms, such as sky-stone and fire-wood.
+
+        -The dungeons should be generated randomly using the wave function collapse algorithm
+
+
+-create main program file:
+
+
+    -Create the WFC (Wave Function Collapse) file:
+
+
+        -Figure out how the tiles compare.
+
+        -Figure out how to store the tiles.
+
+        -Make the file work without the tile class being inside:
+
+
+            -So it can be used for other projects easily and not depend on the variables of the class being used
+
+        -Integrate the wave function collapse algorithm
+
+        -Create documentation on the module and log the errors encountered in development.
+    
+    -Import the WFC (Wave Function Collapse) module and integrate it.
+
+    -Import the pygame module and create the screen object
+
+    -Design the sprites for the game
+
+    -Figure out controls
+
+    -Add features such as mining, cooking, and other skills that could be used in different realms
+
+    -Add moral choices and consequences for the player to navigate
+
+    -Incorporate the metaphor of real-life issues into the story and mechanics of the game
